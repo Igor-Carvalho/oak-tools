@@ -5,9 +5,12 @@ from setuptools import find_packages, setup
 
 setup(
     name='oak-tools',
-    version='0.0.5',
+    version='0.0.6',
     description='My Simple Tools',
     packages=find_packages(),
+    install_requires=[
+        'aiohttp',
+    ],
     entry_points={
         'console_scripts': [
             'desligar-serviços=main.services:shutdown_local_services',
