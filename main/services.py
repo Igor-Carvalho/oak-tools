@@ -12,3 +12,5 @@ def shutdown_local_services():
     """Desliga serviços de desenvolvimento comuns nesta máquina."""
     for service in 'postgresql nginx redis-server rabbitmq-server'.split():
         shutdown_service(service)
+
+    system('dropbox stop')
