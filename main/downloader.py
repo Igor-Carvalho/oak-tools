@@ -11,7 +11,6 @@ import curses
 
 
 class Screen:
-
     """
     Grid screen where coroutines write streaming metadata (View).
 
@@ -65,7 +64,6 @@ class Screen:
 
 
 class Row:
-
     """Model."""
 
     def __init__(self, screen, content=''):
@@ -80,7 +78,6 @@ class Row:
 
 
 class Downloader:
-
     """Controller."""
 
     def __init__(self, stdscr, urls):
