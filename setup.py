@@ -5,7 +5,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='oak-tools',
-    version='0.0.8',
+    version='0.0.9',
     description='My Simple Tools',
     packages=find_packages(),
     install_requires=[
