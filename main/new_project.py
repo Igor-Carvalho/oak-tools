@@ -9,9 +9,10 @@ def main():
     """Run module."""
     parser = ArgumentParser()
     parser.add_argument('project_name')
+    parser.add_argument('--template', dest='template')
     args = parser.parse_args()
 
-    template_url = 'https://github.com/Igor-Carvalho/django-aws-template/archive/master.zip'
+    template_url = args.template or 'https://github.com/Igor-Carvalho/django-aws-template/archive/master.zip'
     extension = 'py,rst,txt,html,js,json'
     name = '.bowerrc'
     params = args.project_name, template_url, extension, name
