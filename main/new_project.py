@@ -14,7 +14,7 @@ def main():
 
     template_url = args.template or 'https://github.com/Igor-Carvalho/django-aws-template/archive/master.zip'
     extension = 'py,rst,txt,html,js,json'
-    name = '.bowerrc'
+    name = 'Procfile,'
     params = args.project_name, template_url, extension, name
     cmd = 'django-admin startproject {} --template {} --extension {} --name {}'.format(*params)
     system(cmd)
