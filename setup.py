@@ -5,7 +5,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='oak-tools',
-    version='0.0.12',
+    version='0.0.14',
     description='My Simple Tools',
     packages=find_packages(),
     install_requires=[
@@ -14,6 +14,7 @@ setup(
     entry_points={
         'console_scripts': [
             'desligar-serviços=main.services:shutdown_local_services',
+            'desligar-serviços-extras=main.services:shutdown_other_services',
             'iniciar-serviços=main.services:start_services',
             'download=main.downloader:main',
             'new_project=main.new_project:main',

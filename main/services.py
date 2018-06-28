@@ -17,6 +17,12 @@ def shutdown_local_services():
     os.system('dropbox stop')
 
 
+def shutdown_other_services():
+    """Desliga serviços não essenciais no dia a dia."""
+    for service in 'nginx mysql gunicorn apache2'.split():
+        shutdown_service(service)
+
+
 def start_service(service: str):
     """Inicia um serviço."""
     os.system('sudo service {} start'.format(service))
